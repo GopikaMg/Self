@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<h2> Form</h2>
+
+<form method="post" id="personForm" data-branches-url="{% url 'cities' %}">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <label for="fname">Phone no:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="fname">Email:</label><br><br>
+  <input type="email" id="email" name="email"><br><br>
+
+        <label >Choose your gender:</label><br><br>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" checked>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female">
+    <br>
+    <br>
+
+        <label for="cars">Account type:</label>
+        <select name="cars" id="cars">
+          <option value="volvo">savings account</option>
+          <option value="saab">current account</option>
+        </select> <br><br>
+        Age: <input type="number" name="usrname"><br><br>
+        <label for="fname">Address:</label><br><br>
+        <textarea rows="4" cols="50" name="comment" form="usrform">
+            Enter your address here...</textarea><br><br>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"> <br><br>
+    <label for="birthday">Materials provide:</label><br><br>
+    <input type="checkbox"  name="vehicle1" value="Bike">
+  <label > debit card</label><br><br>
+  <input type="checkbox"  name="vehicle2" value="Car">
+  <label>credit card</label><br><br>
+  <input type="checkbox"  name="vehicle3" value="Boat">
+  <label >cheque book</label><br><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" value="Logout"><a href="{% url 'logout' %}"></a>
+
+    <br><br><br>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#id_district").change(function () {
+        const url = $("#personForm").attr("data-branches-url");  // get the url of the `load_cities` view
+        const districtId = $(this).val();  // get the selected country ID from the HTML input
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'district_id': districtId       // add the country id to the GET parameters
+            },
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+                $("#id_branch").html(data);  // replace the contents of the city input with the data that came from the server
+                /*
+
+                let html_data = '<option value="">---------</option>';
+                data.forEach(function (city) {
+                    html_data += `<option value="${city.id}">${city.name}</option>`
+                });
+                console.log(html_data);
+                $("#id_city").html(html_data);
+
+                */
+            }
+        });
+
+    });
+</script>
+
+
+</body>
+</html>

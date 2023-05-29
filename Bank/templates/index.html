@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Cryptop</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/reg_login.css' %}">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section" >
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+                 Banking
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+
+                <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Branches
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">Ernakulam</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Palakkad">Palakkad</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam">Kottayam</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alappuzha">Alappuzha</a>
+  </div>
+</div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}"> Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register' %}"> Register</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="detail-box">
+                      <div>
+                        <h2 style="color:SlateBlue;">
+                           Online Banking
+                        </h2>
+                        <div class="text-justify">
+                        <h5 style="color:DarkSlateBlue;">
+                          We deeply understand your brand, industry, target audience, and business objects before getting started in developing a high-performance digital promotion campaign for you. After understanding your business and growth targets, we suggest a program to meet your requirements and resources.
+                        </h5>
+                        </div>
+                        <div class="">
+                          <a href="">
+                            Get Started
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="img-box">
+                      <img src="{% static 'images/slider-img.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <img src="{% static 'images/Bankbanner.png' %}" style="width:500;" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="detail-box">
+                      <h2 style="color:SlateBlue;">
+                           Online Banking
+                        </h2>
+                        <div class="text-justify">
+                        <h5 style="color:DarkSlateBlue;">
+                          We deeply understand your brand, industry, target audience, and business objects before getting started in developing a high-performance digital promotion campaign for you. After understanding your business and growth targets, we suggest a program to meet your requirements and resources.
+                        </h5>
+                        </div>
+                        <div class="">
+                          <a href="">
+                            Get Started
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="img-box">
+                      <img src="{% static 'images/slider-img.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-5">
+                  <img src="{% static 'images/Bankbanner.png' %}" style="width:500;" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="detail-box">
+                      <h2 style="color:SlateBlue;">
+                           Online Banking
+                        </h2>
+                        <div class="text-justify">
+                        <h5 style="color:DarkSlateBlue;">
+                          We deeply understand your brand, industry, target audience, and business objects before getting started in developing a high-performance digital promotion campaign for you. After understanding your business and growth targets, we suggest a program to meet your requirements and resources.
+                        </h5>
+                        </div>
+                        <div class="">
+                          <a href="">
+                            Get Started
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="img-box">
+                      <img src="{% static 'images/slider-img.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-5">
+                  <img src="{% static 'images/Bankbanner.png' %}" style="width:500;" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- how section -->
+  <section class="how_section layout_padding">
+    <div class="heading_container">
+
+    </div>
+  </section>
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+
+      </div>
+
+  </section>
+
+
+
+
+
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2019 All Rights Reserved
+
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' %}">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+</body>
+
+</html>

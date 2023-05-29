@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reg_login.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body id="bg" style=" background-repeat: no-repeat; background-image:url({% static 'images/register-bg.jpeg' %})">
+
+<h1 ALIGN="CENTER">Registration form</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+ <input type="text"  placeholder="Enter Username" name="uname" required><br><br>
+
+    <input type="password" placeholder="Enter Password" name="pwd" required><br><br>
+    <input type="password" placeholder="Confirm Password" name="cpwd" required><br><br>
+    <a href="{% url 'login' %}"><input type="submit" value="Register"></a>
+
+
+</form>
+</body>
+ <section class="how_section layout_padding">
+    <div class="heading_container">
+
+    </div>
+  </section>
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+
+      </div>
+
+  </section>
+<section class="about_section layout_padding-bottom">
+    <div class="container">
+
+      </div>
+
+  </section>
+
+
+
+<section class="container-fluid footer_section" style=" background-color: #F5F5F5;">
+    <p style="color:#696969;">
+      &copy; 2019 All Rights Reserved
+
+    </p>
+  </section>
+</html>
